@@ -7,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +28,7 @@ button {
     padding: 20px;
     border-radius: 25px;
     background-color: #222;
+    min-width: 656px;
 }
 
 .piano h2 {
@@ -66,8 +67,6 @@ button {
 
 .key {
     box-sizing: border-box;
-    width: 30px;
-    height: 120px;
     margin: 5px 0;
     font-size: 14px;
     font-weight: 600;
@@ -77,8 +76,9 @@ button {
 
 .key.white {
     position: relative;
+    height: 140px;
     width: 40px;
-    line-height: 200px;
+    line-height: 230px;
     color: #777;
     border-radius: 5px;
 }
@@ -114,4 +114,10 @@ button {
     bottom: 0;
     border-radius: 0 0 5px 5px;
     background-color: #333;
+}
+
+@media (max-width: 720px) {
+    .piano {
+        transform: rotate(90deg);
+    }
 }
